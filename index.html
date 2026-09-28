@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitBuddy - AI Fitness Plan Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>FitBuddy</h1>
+      <p>AI Fitness Plan Generator using Gemini</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Create Your Fitness Plan</h2>
+      <p class="subtitle">Enter your details and let FitBuddy generate a simple plan.</p>
+
+      <form id="fitnessForm">
+        <div class="grid">
+          <label>
+            Age
+            <input type="number" id="age" min="13" max="100" required />
+          </label>
+
+          <label>
+            Height (cm)
+            <input type="number" id="height" min="50" max="250" required />
+          </label>
+
+          <label>
+            Weight (kg)
+            <input type="number" id="weight" min="20" max="300" required />
+          </label>
+
+          <label>
+            Fitness Goal
+            <select id="goal" required>
+              <option value="">Select goal</option>
+              <option value="Weight Loss">Weight Loss</option>
+              <option value="Weight Gain">Weight Gain</option>
+              <option value="Muscle Building">Muscle Building</option>
+              <option value="General Fitness">General Fitness</option>
+            </select>
+          </label>
+
+          <label>
+            Fitness Level
+            <select id="fitness_level" required>
+              <option value="">Select level</option>
+              <option value="Beginner">Beginner</option>
+              <option value="Intermediate">Intermediate</option>
+              <option value="Advanced">Advanced</option>
+            </select>
+          </label>
+        </div>
+
+        <button type="submit" id="generateBtn">Generate My Plan</button>
+      </form>
+
+      <div id="status" class="status"></div>
+    </section>
+
+    <section id="resultCard" class="card result hidden">
+      <h2>Your FitBuddy Plan</h2>
+      <div id="plan"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>FitBuddy &copy; 2026 | Academic Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
